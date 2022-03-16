@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CalculaAv1">
+
+    <TextView
+        android:id="@+id/lblTituloNotas"
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="30dp"
+        android:text="Notas das atividades!"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/lblCalcAv1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/lblNotasAva"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Digite as notas da Ava1 e Ava2!"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.074"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblTituloNotas" />
+
+    <TextView
+        android:id="@+id/lblNotaAva1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:text="AVA1:"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/lblNotasAva"
+        app:layout_constraintTop_toBottomOf="@+id/lblNotasAva" />
+
+    <EditText
+        android:id="@+id/txtNotaAva1"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:text="0"
+        app:layout_constraintStart_toStartOf="@+id/lblNotaAva1"
+        app:layout_constraintTop_toBottomOf="@+id/lblNotaAva1" />
+
+    <TextView
+        android:id="@+id/lblNotaAva2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="168dp"
+        android:text="AVA2:"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/lblNotasAva"
+        app:layout_constraintTop_toBottomOf="@+id/lblNotasAva" />
+
+    <EditText
+        android:id="@+id/txtNotaAva2"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:text="0"
+        app:layout_constraintStart_toStartOf="@+id/lblNotaAva2"
+        app:layout_constraintTop_toBottomOf="@+id/lblNotaAva2" />
+
+    <Button
+        android:id="@+id/btnEnviarAv1"
+        android:layout_width="195dp"
+        android:layout_height="48dp"
+        android:onClick="retornaAv1"
+        android:text="Calcular AV1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtNotaAva2"
+        app:layout_constraintVertical_bias="0.26999998" />
+</androidx.constraintlayout.widget.ConstraintLayout>
