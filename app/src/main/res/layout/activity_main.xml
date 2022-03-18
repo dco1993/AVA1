@@ -10,15 +10,12 @@
         android:id="@+id/lblTitulo"
         android:layout_width="wrap_content"
         android:layout_height="32dp"
-        android:layout_marginTop="130dp"
-        android:layout_marginBottom="30dp"
+        android:layout_marginTop="16dp"
         android:text="Calcular Média do Semestre"
         android:textAlignment="center"
         android:textSize="24sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/lblCalcAv1"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -26,9 +23,9 @@
         android:id="@+id/lblCalcAv1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
         android:text="Calcular Nota AV1:"
         android:textSize="16sp"
-        app:layout_constraintBottom_toTopOf="@+id/btnCalcAv1"
         app:layout_constraintStart_toStartOf="@+id/lblTitulo"
         app:layout_constraintTop_toBottomOf="@+id/lblTitulo" />
 
@@ -36,10 +33,8 @@
         android:id="@+id/btnCalcAv1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="56dp"
         android:onClick="onClickCalculaAv1"
         android:text="Calcular"
-        app:layout_constraintBottom_toTopOf="@+id/lblDigAv2"
         app:layout_constraintStart_toStartOf="@+id/lblCalcAv1"
         app:layout_constraintTop_toBottomOf="@+id/lblCalcAv1" />
 
@@ -47,70 +42,49 @@
         android:id="@+id/lblNotaAv1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Nota AV1"
-        app:layout_constraintBottom_toTopOf="@+id/lblDigAv2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.149"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnCalcAv1"
-        app:layout_constraintVertical_bias="0.217" />
+        android:text="Sua Nota da AV1: "
+        app:layout_constraintStart_toStartOf="@+id/btnCalcAv1"
+        app:layout_constraintTop_toBottomOf="@+id/btnCalcAv1" />
 
     <TextView
         android:id="@+id/lblDigAv2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="54dp"
-        android:layout_marginEnd="54dp"
+        android:layout_marginTop="40dp"
         android:text="Digite sua nota da AV2:"
         android:textSize="16sp"
-        app:layout_constraintBottom_toTopOf="@+id/txtNotaAv2"
-        app:layout_constraintEnd_toEndOf="@+id/cbxRealizouAv3"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnCalcAv1" />
+        app:layout_constraintStart_toStartOf="@+id/lblNotaAv1"
+        app:layout_constraintTop_toBottomOf="@+id/lblNotaAv1" />
 
     <EditText
         android:id="@+id/txtNotaAv2"
         android:layout_width="296dp"
         android:layout_height="50dp"
-        android:layout_marginStart="55dp"
-        android:layout_marginEnd="55dp"
-        android:layout_marginBottom="66dp"
         android:ems="10"
         android:inputType="numberDecimal"
         android:text="0"
-        app:layout_constraintBottom_toTopOf="@+id/cbxRealizouAv3"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/lblDigAv2"
         app:layout_constraintTop_toBottomOf="@+id/lblDigAv2" />
 
     <EditText
         android:id="@+id/txtNotaAv3"
         android:layout_width="296dp"
         android:layout_height="50dp"
-        android:layout_marginStart="55dp"
-        android:layout_marginEnd="55dp"
-        android:layout_marginBottom="79dp"
         android:ems="10"
         android:enabled="false"
         android:inputType="numberDecimal"
         android:text="0"
-        app:layout_constraintBottom_toTopOf="@+id/btnCalcMedia"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/lblDigAv3"
         app:layout_constraintTop_toBottomOf="@+id/lblDigAv3" />
 
     <CheckBox
         android:id="@+id/cbxRealizouAv3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="54dp"
+        android:layout_marginTop="40dp"
         android:checked="false"
         android:text="Foi necessário realizar a AV3?"
-        app:layout_constraintBottom_toTopOf="@+id/lblDigAv3"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/txtNotaAv2"
         app:layout_constraintTop_toBottomOf="@+id/txtNotaAv2" />
 
     <TextView
@@ -119,18 +93,16 @@
         android:layout_height="wrap_content"
         android:text="Digite sua nota da AV3:"
         android:textSize="16sp"
-        app:layout_constraintBottom_toTopOf="@+id/txtNotaAv3"
-        app:layout_constraintEnd_toEndOf="@+id/cbxRealizouAv3"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/cbxRealizouAv3"
         app:layout_constraintTop_toBottomOf="@+id/cbxRealizouAv3" />
 
     <Button
         android:id="@+id/btnCalcMedia"
         android:layout_width="wrap_content"
         android:layout_height="48dp"
-        android:layout_marginBottom="141dp"
+        android:layout_marginTop="40dp"
+        android:onClick="onClickCalculaMedia"
         android:text="Calcular Média"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtNotaAv3" />
